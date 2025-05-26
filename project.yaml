@@ -1,0 +1,11 @@
+---
+- name: project creation
+  hosts: all
+  tasks:
+    - name: create project
+      project:
+        name: test
+        description: "Foo bar project"
+        organization: Default
+        state: present
+        scm_url: https://github.com/RachnaDodia/rhel.git
